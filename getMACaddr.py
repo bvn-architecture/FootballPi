@@ -24,9 +24,10 @@ def getMAC(interface='eth0'):
 
 if __name__ == "__main__":
     ethName = getEthName()
-    ethMAC = getMAC(ethName)
+    ethMAC = getMAC('eth0')
     name = sys.argv[1]
     row = [name, ethMAC]
+    print(ethMAC)
     with open('MAC adresses.csv', 'a') as f:
         writer = csv.writer(f)
         writer.writerow(row)
