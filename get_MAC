@@ -1,0 +1,7 @@
+#!/bin/bash
+cp .gitconfig ..
+python getMACaddr.py "$1"
+git add .
+git commit -m "$1"
+git push
+echo 'pi:raspberryoatmeal' | chpasswd
