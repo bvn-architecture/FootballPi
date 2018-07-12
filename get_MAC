@@ -4,4 +4,4 @@ python getMACaddr.py "$1"
 git add .
 git commit -m "$1"
 git push
-yes raspberryoatmeal | passwd pi
+sudo yes raspberryoatmeal | passwd pi
