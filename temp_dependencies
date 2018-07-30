@@ -1,0 +1,10 @@
+#!/bin/bash
+# install pip
+sudo apt-get install python-pip
+# install one-wire DS18B20 library
+sudo pip install python3-w1thermsensor
+# enable one wire on pin 8 (usually done via raspi-config)
+sudo dtoverlay w1-gpio gpiopin=8 pullup=0
+
+# run python script
+sudo python3 record_temp.py
